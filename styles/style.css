@@ -1,0 +1,213 @@
+@import url(/home/gaian/Desktop/Project/styles/fonts.css);
+/* -- Varaiables --*/
+/*--End of Varaiables --*/
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.banner-section {
+  width: 100%;
+  height: 45.50626vh;
+  background-image: url("../images/Shopping Cart.png");
+  background-size: 100% 100%;
+}
+
+@media screen and (max-width: 425px) {
+  .banner-section {
+    height: 28.44141vh;
+  }
+}
+
+.tabs {
+  width: 100%;
+  height: auto;
+}
+
+.tabs ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: none !important;
+  height: 11.37656vh;
+}
+
+.tabs ul li {
+  float: left;
+  padding: 1.13766vh 2.08333vw;
+  background-color: #d7d7d7;
+  font-family: "Lato-Regular";
+  font-size: 1.70648vh;
+}
+
+.tabs ul li a {
+  padding: 1.13766vh 1.73611vw;
+  color: #000;
+  border: none !important;
+  letter-spacing: 1px;
+  border-radius: 0 !important;
+  font-family: "Lato-Regular";
+  font-size: 1.70648vh;
+  font-weight: bold;
+}
+
+.tabs ul li a.active {
+  background-color: #fff !important;
+  color: #141414 !important;
+}
+
+.tab-content {
+  margin: 0;
+}
+
+.tab-content .tab-pane {
+  padding: 0;
+  color: #fff;
+}
+
+.tab-content .shoes-section .card-div__3, .tab-content .mobile-section .card-div__3 {
+  width: 23%;
+  margin: 1%;
+}
+
+@media screen and (max-width: 768px) {
+  .tab-content .shoes-section .card-div__3, .tab-content .mobile-section .card-div__3 {
+    width: 31%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .tab-content .shoes-section .card-div__3, .tab-content .mobile-section .card-div__3 {
+    width: 90%;
+    margin: 2% 5%;
+  }
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure, .tab-content .mobile-section .card-div__3 .card-structure {
+  width: 100%;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure .img-section, .tab-content .mobile-section .card-div__3 .card-structure .img-section {
+  position: relative;
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure .img-section img, .tab-content .mobile-section .card-div__3 .card-structure .img-section img {
+  width: 100%;
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure .img-section .popular-tag, .tab-content .mobile-section .card-div__3 .card-structure .img-section .popular-tag {
+  position: absolute;
+  font-size: 1.70648vh;
+  font-family: "Lato-Bold";
+  background-color: #333;
+  color: #fff;
+  padding: 0.22753vh 0.69444vw;
+  top: 3%;
+  left: 0;
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure .img-section .popular-tag.popular, .tab-content .mobile-section .card-div__3 .card-structure .img-section .popular-tag.popular {
+  background-color: #E74C3C !important;
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure .img-section .popular-tag.new, .tab-content .mobile-section .card-div__3 .card-structure .img-section .popular-tag.new {
+  background-color: #58D68D !important;
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure .img-section .popular-tag:hover, .tab-content .mobile-section .card-div__3 .card-structure .img-section .popular-tag:hover {
+  color: #d7d7d7;
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure .img-section .Offer-tag, .tab-content .mobile-section .card-div__3 .card-structure .img-section .Offer-tag {
+  position: absolute;
+  font-size: 1.70648vh;
+  font-family: "Lato-Bold";
+  background: lightblue;
+  color: #000;
+  padding: 0.22753vh 0.69444vw;
+  bottom: 3%;
+  text-align: center;
+  right: 0;
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure .img-section .overlay, .tab-content .mobile-section .card-div__3 .card-structure .img-section .overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure .img-section .overlay img, .tab-content .mobile-section .card-div__3 .card-structure .img-section .overlay img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure .img-section:hover .overlay, .tab-content .mobile-section .card-div__3 .card-structure .img-section:hover .overlay {
+  opacity: 1;
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure .content-section, .tab-content .mobile-section .card-div__3 .card-structure .content-section {
+  padding: 3%;
+  text-align: center;
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure .content-section .content-section__title, .tab-content .mobile-section .card-div__3 .card-structure .content-section .content-section__title {
+  color: #000;
+  margin-bottom: 1.13766vh;
+  font-family: "Lato-Regular";
+  font-size: 2.84414vh;
+  font-weight: bold;
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure .content-section .star-rating i, .tab-content .mobile-section .card-div__3 .card-structure .content-section .star-rating i {
+  color: #ff9529;
+  cursor: pointer;
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure .content-section .content-section__description, .tab-content .mobile-section .card-div__3 .card-structure .content-section .content-section__description {
+  color: #000;
+  margin-bottom: 1.13766vh;
+  font-family: "Lato-Regular";
+  font-size: 2.04778vh;
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure .content-section .content-section__price, .tab-content .mobile-section .card-div__3 .card-structure .content-section .content-section__price {
+  color: #000;
+  margin-bottom: 1.13766vh;
+  font-family: "Lato-Regular";
+  font-size: 2.27531vh;
+  font-weight: bold;
+}
+
+.tab-content .shoes-section .card-div__3 .card-structure .content-section .buy-not__btn, .tab-content .mobile-section .card-div__3 .card-structure .content-section .buy-not__btn {
+  padding: 0.91013vh 1.38889vw;
+  border: none;
+  border-radius: 0.27778vw;
+  font-family: "Lato-Regular";
+  font-size: 1.82025vh;
+}
+/*# sourceMappingURL=style.css.map */

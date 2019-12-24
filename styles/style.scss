@@ -1,0 +1,205 @@
+@import "./fonts.css";
+
+/* -- Varaiables --*/
+
+$primary-regular-font-family: 'Lato-Regular';
+$primary-bold-font-family: 'Lato-Bold';
+$primary-black-font-family: 'Lato-Black';
+$primary-italic-font-family: 'Lato-Italic';
+
+$black : #000;
+$white : #fff;
+$oneVh : 0.113765643vh;
+$oneVw: 0.069444444vw;
+
+$break-point-tablet : 768px;
+$break-point-laptop : 1024px;
+$break-point-mobile : 425px;
+
+$card-width : 100% / 4 ;
+
+/*--End of Varaiables --*/
+
+body {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.banner-section {
+    width: 100%;
+    height: $oneVh * 400;
+    background-image: url('../images/Shopping\ Cart.png');
+    background-size: 100% 100%;
+    @media screen and (max-width: 425px) {
+        height: $oneVh * 250;
+    }
+}
+.tabs {
+    width: 100%;
+    height: auto;
+    ul { 
+        list-style: none;
+        padding: 0;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: none !important;
+        height: $oneVh * 100;
+        li {
+            float: left;
+            padding: $oneVh * 10 $oneVw * 30;
+            background-color: #d7d7d7;
+            font: {
+                family: $primary-regular-font-family;
+                size: $oneVh * 15;
+            }
+            a {
+                padding: $oneVh * 10 $oneVw * 25;
+                color: $black;
+                border: none !important;
+                letter-spacing: 1px;
+                border-radius: 0 !important;
+                font: {
+                    family: $primary-regular-font-family;
+                    size: $oneVh * 15;
+                    weight: bold;
+                }
+                &.active {
+                    background-color: $white !important;
+                    color: #141414 !important;
+                }
+            }
+        }
+    }
+}
+
+.tab-content {
+    margin: 0;
+    .tab-pane {
+        padding: 0;
+        color: $white;
+    }
+    .shoes-section , .mobile-section {
+        .card-div__3 {
+            width: $card-width - 2%;
+            margin: 1%;
+            @media screen and (max-width: 768px) {
+                width: 31%;
+            }
+            @media screen and (max-width: 425px) {
+                width: 90%;
+                margin: 2% 5%;
+            }
+            .card-structure {
+                width: 100%;
+                box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+                .img-section {
+                    position: relative;
+                    img {
+                        width: 100%;
+                    }
+                    .popular-tag {
+                        position: absolute;
+                        font-size: $oneVh * 15;
+                        font-family: $primary-bold-font-family;
+                        background-color: #333;
+                        color: #fff;
+                        padding: $oneVh * 2 $oneVw * 10;
+                        top: 3%;
+                        left: 0;
+                        &.popular {
+                            background-color: #E74C3C !important;
+                        }
+                        &.new {
+                            background-color: #58D68D !important;
+                        }
+                        &:hover {
+                            color: #d7d7d7;
+                        }
+                    }
+                    .Offer-tag {
+                        position: absolute;
+                        font-size: $oneVh * 15;
+                        font-family: $primary-bold-font-family;
+                        background: lightblue;
+                        color: #000;
+                        padding: $oneVh * 2 $oneVw * 10;
+                        bottom: 3%;
+                        text-align: center;
+                        right: 0;
+                    }
+                    .overlay {
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        height: 100%;
+                        width: 100%;
+                        opacity: 0;
+                        transition: .5s ease;
+                    }
+                    .overlay img {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        -ms-transform: translate(-50%, -50%);
+                        text-align: center;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    &:hover .overlay {
+                        opacity: 1;
+                    }
+                }
+                .content-section {
+                    padding: 3%;
+                    text-align: center;
+                    .content-section__title {
+                        color: $black;
+                        margin-bottom: $oneVh * 10;
+                        font: {
+                            family: $primary-regular-font-family;
+                            size: $oneVh * 25;
+                            weight: bold;
+                        }
+                    }
+                    .star-rating {
+                        i {
+                            color: #ff9529;
+                            cursor: pointer;
+                        }
+                    }
+                    .content-section__description {
+                        color: $black;
+                        margin-bottom: $oneVh * 10;
+                        font: {
+                            family: $primary-regular-font-family;
+                            size: $oneVh * 18;
+                        }
+                    }
+                    .content-section__price {
+                        color: $black;
+                        margin-bottom: $oneVh * 10;
+                        font: {
+                            family: $primary-regular-font-family;
+                            size: $oneVh * 20;
+                            weight: bold;
+                        }
+                    }
+                    .buy-not__btn {
+                        padding: $oneVh * 8 $oneVw * 20;
+                        border: none;
+                        border-radius: $oneVw * 4;
+                        font: {
+                            family: $primary-regular-font-family;
+                            size: $oneVh * 16;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
