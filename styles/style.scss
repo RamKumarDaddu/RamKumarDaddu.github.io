@@ -29,8 +29,8 @@ body {
     height: $oneVh * 400;
     background-image: url('../images/Shopping\ Cart.png');
     background-size: 100% 100%;
-    @media screen and (max-width: 425px) {
-        height: $oneVh * 250;
+    @media screen and (max-width: $break-point-mobile) {
+        height: $oneVh * 220;
     }
 }
 .tabs {
@@ -83,10 +83,10 @@ body {
         .card-div__3 {
             width: $card-width - 2%;
             margin: 1%;
-            @media screen and (max-width: 768px) {
+            @media screen and (max-width: $break-point-tablet) {
                 width: 31%;
             }
-            @media screen and (max-width: 425px) {
+            @media screen and (max-width: $break-point-mobile) {
                 width: 90%;
                 margin: 2% 5%;
             }
