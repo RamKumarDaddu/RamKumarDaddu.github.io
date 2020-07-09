@@ -1,0 +1,83 @@
+body {
+    background-color: black;
+    height: 100vh;
+    /* background-image: url('images/layer.png'); */
+}
+#mainContainer {
+    width: 100%;
+    /* height: 100vh; */
+}
+#mainContainer img {
+    width: 100%;
+    padding: 5px;
+}
+.jumbotron {
+    background-color: transparent;
+    text-align: center;
+}
+.jumbotron h1 {
+    font-weight: bold;
+}
+.jumbotron h1, p {
+    font-family: 'Montserrat', sans-serif;
+    color: #d7d7d7;
+}
+.jumbotron p {
+    font-size: 1rem;
+}
+
+.contentContainer {
+    width: 100%;
+    height: 100%;
+}
+.contentContainer .Tabs {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contentContainer ul {
+    width: 30%;
+    height: 80%;
+}
+.contentContainer ul li {
+    width: 50%;
+}
+.contentContainer .Tabs button {
+    width: 10%;
+    margin-right: 10px;
+    background-color: transparent;
+    border: 1px solid #d7d7d7;
+    height: 70%;
+    font-family: 'Montserrat', sans-serif;
+    color: #d7d7d7;
+}
+.contentContainer .Tabs .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    color: #d7d7d7;
+    font-size: 0.8rem;
+    padding: 1vh 0 !important;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contentContainer ul li a.active, .contentContainer ul li a:hover, .contentContainer ul li a:focus {
+    border-color: #dee2e6 #dee2e6 #fff;
+    border-radius: 0;
+}
+.nav-link.active {
+    background-color: transparent !important;
+}
+.tab-content {
+    width: 100%;
+    height: 100%;
+    margin-top: 5vh;
+}
+
+
+@media only screen and (max-width: 425px) {
+    .contentContainer ul {
+        width: 70%;
+    }
+}
