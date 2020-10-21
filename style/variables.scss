@@ -1,0 +1,25 @@
+@import 'fonts.scss';
+
+/*======= Font family =======*/
+
+$primary-poppins-bold: 'PoppinsBold';
+$primary-poppins-semibold: 'PoppinsSemiBold';
+$primary-opensans-regular: 'OpenSansRegular';
+$primary-opensans-bold: 'OpenSansBold';
+$font-path: "./fonts" !default;
+
+/*======= Font Colors =======*/
+
+$backgroundColor: #E7EDF6;
+$white: #fff;
+$headerFont: #FF0066;
+$cardHeaderColor: #2B2ECF;
+$tagBgColor: #F6C937;
+$cardDescription: #7F8A9C;
+$bannerBgColor: linear-gradient(135deg, #2B2ECF 0%, #652BCF 100%);
+$toggleSwitchBgColor: #2B2ECF;
+
+/********** Font Sizes ***********/
+
+$oneVw: 0.069444444vw; // 1px / 1920(screen size width) * 100
+$oneVh: 0.111111111vh; // 1px / 1080(screen size width) * 100

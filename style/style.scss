@@ -1,0 +1,457 @@
+@import 'variables.scss';
+
+:root {
+    font-size: 16px;
+}
+    
+* {
+    margin: 0;
+    padding: 0;
+    body {
+        width: 100%;
+        height: 100vh;
+        background-color: $backgroundColor;
+        font-family: $primary-poppins-bold;
+        main {
+            width: 100%;
+            height: 100%;
+            .xs-navbar {
+                display: none;
+            }
+            .lg-navbar {
+                width: 5%;
+                height: 96%;
+                position: fixed;
+                left: 2%;
+                top: 2%;
+                background-image: $bannerBgColor;
+                border-radius: 1.25rem;
+                .navbar-brand {
+                    width: 100%;
+                    height: 12%;
+                    > img {
+                        width: 80%;
+                        height: 100%;
+                        padding: 0 10%;
+                    }
+                }
+                .navbar-nav {
+                    width: 100%;
+                    height: 88%;
+                    list-style: none;
+                    .navbar-item {
+                        width: 80%;
+                        height: 7.5%;
+                        margin: 5% 10%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        > img {
+                            width: 35%;
+                        }
+                        &.active {
+                            background-color: $headerFont !important;
+                        }
+                    }
+                    .logout-item {
+                        position: absolute;
+                        bottom: 0;
+                    }
+                }
+            }
+            .main-container {
+                width: 91%;
+                height: 100%;
+                position: absolute;
+                left: 9%;
+                .title-section {
+                    width: 100%;
+                    height: 15%;
+                    .title {
+                        width: 80%;
+                        height: 100%;
+                        display: flex;
+                        align-items: center;
+                        font-size: 2.500vw;
+                        float: left;
+                        color: $headerFont;
+                    }
+                    .switch-div {
+                        width: 20%;
+                        height: 100%;
+                        float: right;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        >label {
+                            width: 50%;
+                            height: 40%;
+                            background-color: white;
+                            border-radius: 2.5rem;
+                            >button {
+                                width: 40%;
+                                height: 90%;
+                                background-color: transparent;
+                                border: none;
+                                border-radius: 50%;
+                                padding: 0;
+                                margin: 2% 4%;
+                                float: left;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                >img {
+                                    width: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+                .grid-tiles {
+                    .card-container, .grid-container {
+                        display: flex;
+                        flex-wrap: wrap;
+                        .tile {
+                            flex: 23%;
+                            max-width: 23%;
+                            margin: 0 4px;
+                            .card {
+                                width: 96%;
+                                background-color: $white;
+                                border-radius: 10px;
+                                float: left;
+                                margin: 1% 1% 1% 0;
+                                position: relative;
+                                > .container {
+                                    padding: 5%;
+                                    > img {
+                                        width: 100%;
+                                        height: 16.666666666666668vh;
+                                        object-fit: cover;
+                                    }
+                                    .tag {
+                                        padding: 0px 10px;
+                                        border-radius: 10px;
+                                        background-color: $tagBgColor;
+                                        font-size: 0.972vw;
+                                        font-family: $primary-opensans-bold;
+                                        color: $white;
+                                    }
+                                    .card-title {
+                                        font-size: 1.667vw;
+                                        color: $cardHeaderColor;
+                                        font-family: $primary-poppins-semibold;
+                                        padding: 0.5vw;
+                                    }
+                                    .card-description {
+                                        color: $cardDescription;
+                                        font-size: 1.250vw;
+                                        font-family: $primary-opensans-regular;
+                                        padding: 0.5vw;
+                                    }
+                                    .respond-icons {
+                                        text-align: right;
+                                        div {
+                                            width: 20%;
+                                            float: right;
+                                            text-align: center;
+                                            padding: $oneVh * 15 0;
+                                            > img {
+                                                width: 40%;
+                                            }
+                                        }
+                                    }
+                                }
+                                .selectBox {
+                                    position: absolute;
+                                    width: 1.25625rem;
+                                    height: 1.25625rem;
+                                    border: 2px solid #fff;
+                                    top: 5%;
+                                    right: 6%;
+                                    border-radius: 100%;
+                                    display: none;
+                                    > input {
+                                        position: absolute;
+                                        opacity: 0;
+                                        cursor: pointer;
+                                        height: 0;
+                                        width: 0;
+                                    }
+                                    .checkmark {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        height: 100%;
+                                        width: 100%;
+                                        background-color: transparent;
+                                        border-radius: 100%;
+                                        &:after {
+                                            content: "";
+                                            position: absolute;
+                                            display: none;
+                                        }
+                                    }
+                                    & > .checkmark:after {
+                                        left: 6px;
+                                        top: 2px;
+                                        width: 5px;
+                                        height: 10px;
+                                        border: solid white;
+                                        border-width: 0 3px 3px 0;
+                                        -webkit-transform: rotate(45deg);
+                                        -ms-transform: rotate(45deg);
+                                        transform: rotate(45deg);
+                                    }
+                                    &:hover input ~ .checkmark {
+                                        background-color: transparent;
+                                    }
+                                    & > input:checked ~ .checkmark {
+                                        background-color: #6ef1b8;
+                                    }
+                                    & > input:checked ~ .checkmark:after {
+                                        display: block;
+                                    }
+                                }
+                                &:hover {
+                                    background-color: $bannerBgColor;
+                                    transition: all 0.5s ease;
+                                    box-shadow: 0 5px 20px 0px rgba(43, 46, 207, 0.5);
+                                }
+                                &:hover .selectBox {
+                                    display: block ;
+                                }
+                            }
+                            .grid {
+                                width: 96%;
+                                background-color: $white;
+                                border-radius: 10px;
+                                float: left;
+                                margin: 1% 1% 1% 0;
+                                height: $oneVh * 80;
+                                padding: 2%;
+                                .grid-img {
+                                    width: 25%;
+                                    height: 100%;
+                                    float: left;
+                                    >img {
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                        border-radius: 10%;
+                                    }
+                                }
+                                .grid-Desc {
+                                    width: 60%;
+                                    height: 100%;
+                                    float: left;
+                                    >h3 {
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        align-items: center;
+                                        padding-left: $oneVw * 12;
+                                        color: $cardHeaderColor;
+                                        font-size: 1.667vw;
+                                    }
+                                }
+                                .grid-resp {
+                                    width: 15%;
+                                    height: 100%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    float: left;
+                                    >img {
+                                        width: 50%;
+                                    }
+                                }
+                                &:hover {
+                                    background-color: $bannerBgColor;
+                                    transition: all 0.5s ease;
+                                    box-shadow: 0 5px 20px 0px rgba(43, 46, 207, 0.5);
+                                }
+                            }
+                        }
+                    }
+                }
+                .selected-DataDiv {
+                    position: absolute;
+                    width: $oneVw * 427;
+                    height: $oneVh * 80;
+                    bottom: 5%;
+                    left: 25%;
+                    // display: flex;
+                    // align-items: center;
+                    // justify-content: center;
+                    display: none;
+                    .container {
+                        height: 100%;
+                        border-radius: 50px;
+                        width: 100%;
+                        background-image: $bannerBgColor;
+                        .deSelect {
+                            width: 20%;
+                            height: 100%;
+                            float: left;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            >img {
+                                width: 35%;
+                            }
+                        }
+                        .selectedCount {
+                            width: 55%;
+                            height: 100%;
+                            float: left;
+                            display: flex;
+                            align-items: center;
+                            >h3 {
+                                font-size: $oneVw * 24;
+                                font-family: $primary-opensans-bold;
+                                color: $white;
+                            }
+                        }
+                        .shareLike {
+                            width: 20%;
+                            height: 100%;
+                            float: left;
+                            display: flex;
+                            align-items: center;
+                            >img {
+                                width: 40%;
+                                padding: $oneVw * 12;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.active {
+    background-color: #2B2ECF !important;
+}
+#listContainer {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    /* For Mobiles */
+    .xs-navbar {
+        width: 100%;
+        height: 60vh;
+        background-image: url("../images/xs-bg.png");
+        background-size: 100%;
+        position: relative;
+        display: block !important;
+        .navbar-brand {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            cursor: pointer;
+            z-index: 2;
+            img {
+                width: 60%;
+                height: 60%;
+            }
+        }
+        .navbar-toggler {
+            position: absolute;
+            top: 7%;
+            right: 5%;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            z-index: 2;
+        }
+        .title {
+            position: absolute;
+            width: 90%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.625rem;
+            text-shadow: 4px 4px #32261A;
+            text-align: center;
+            padding: 0 5%;
+            color: $white;
+            z-index: 1;
+        }
+    }
+    .tile {
+        flex: 100% !important;
+        max-width: 100% !important;
+        margin:  0 15px !important;
+        .card {
+            .container{
+                >img {
+                    height: $oneVh * 250 !important;
+                }
+                .tag {
+                    font-size: $oneVw * 40 !important;
+                }
+                .card-title {
+                    font-size: $oneVw * 75 !important;
+                }
+                .card-description {
+                    font-size: $oneVw * 50 !important;
+                }
+            }
+        }
+        .grid {
+            height: 10.88889vh !important;
+        }
+        .grid-Desc {
+            >h3 {
+                font-size: 5.667vw !important;
+                padding-left: 2.83333vw !important;
+            }
+        }
+    }
+    .main-container {
+        width: 100% !important;
+        left: 0 !important;
+    }
+    .title-section {
+        height: 10% !important;
+        .title {
+            display: none !important;
+        }
+        .switch-div {
+            position: relative;
+            width: 100% !important;
+            height: 100% !important;
+            #wave {
+                width: 100%;
+                height: 100% !important;
+                position: absolute;
+                top: -100%;
+            }
+            >label {
+                width: 23% !important;
+                margin-top: -20% !important;
+                z-index: 1 !important;
+                height: 55% !important;
+                // display: none !important;
+            }
+        }
+    }
+    .lg-navbar {
+        display: none;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .xs-container {
+        height: 50vh;
+    }
+}
+@media only screen and (max-width: 320px) {
+    /* For Small Mobiles */
+    .xs-container {
+        height: 60vh;
+    }
+}

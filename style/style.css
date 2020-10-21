@@ -1,0 +1,594 @@
+@font-face {
+  font-family: 'PoppinsBold';
+  src: url("../fonts/PoppinsBold.eot");
+  src: url("../fonts/PoppinsBold.eot") format("embedded-opentype"), url("../fonts/PoppinsBold.woff2") format("woff2"), url("../fonts/PoppinsBold.woff") format("woff"), url("../fonts/PoppinsBold.ttf") format("truetype"), url("../fonts/PoppinsBold.svg#PoppinsBold") format("svg");
+}
+
+@font-face {
+  font-family: 'OpenSansRegular';
+  src: url("../fonts/OpenSansRegular.eot");
+  src: url("../fonts/OpenSansRegular.eot") format("embedded-opentype"), url("../fonts/OpenSansRegular.woff2") format("woff2"), url("../fonts/OpenSansRegular.woff") format("woff"), url("../fonts/OpenSansRegular.ttf") format("truetype"), url("../fonts/OpenSansRegular.svg#OpenSansRegular") format("svg");
+}
+
+@font-face {
+  font-family: 'OpenSansBold';
+  src: url("../fonts/OpenSansBold.eot");
+  src: url("../fonts/OpenSansBold.eot") format("embedded-opentype"), url("../fonts/OpenSansBold.woff2") format("woff2"), url("../fonts/OpenSansBold.woff") format("woff"), url("../fonts/OpenSansBold.ttf") format("truetype"), url("../fonts/OpenSansBold.svg#OpenSansBold") format("svg");
+}
+
+@font-face {
+  font-family: 'PoppinsSemiBold';
+  src: url("../fonts/PoppinsSemiBold.eot");
+  src: url("../fonts/PoppinsSemiBold.eot") format("embedded-opentype"), url("../fonts/PoppinsSemiBold.woff2") format("woff2"), url("../fonts/PoppinsSemiBold.woff") format("woff"), url("../fonts/PoppinsSemiBold.ttf") format("truetype"), url("../fonts/PoppinsSemiBold.svg#PoppinsSemiBold") format("svg");
+}
+
+/*======= Font family =======*/
+/*======= Font Colors =======*/
+/********** Font Sizes ***********/
+:root {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+* body {
+  width: 100%;
+  height: 100vh;
+  background-color: #E7EDF6;
+  font-family: "PoppinsBold";
+}
+
+* body main {
+  width: 100%;
+  height: 100%;
+}
+
+* body main .xs-navbar {
+  display: none;
+}
+
+* body main .lg-navbar {
+  width: 5%;
+  height: 96%;
+  position: fixed;
+  left: 2%;
+  top: 2%;
+  background-image: linear-gradient(135deg, #2B2ECF 0%, #652BCF 100%);
+  border-radius: 1.25rem;
+}
+
+* body main .lg-navbar .navbar-brand {
+  width: 100%;
+  height: 12%;
+}
+
+* body main .lg-navbar .navbar-brand > img {
+  width: 80%;
+  height: 100%;
+  padding: 0 10%;
+}
+
+* body main .lg-navbar .navbar-nav {
+  width: 100%;
+  height: 88%;
+  list-style: none;
+}
+
+* body main .lg-navbar .navbar-nav .navbar-item {
+  width: 80%;
+  height: 7.5%;
+  margin: 5% 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+}
+
+* body main .lg-navbar .navbar-nav .navbar-item > img {
+  width: 35%;
+}
+
+* body main .lg-navbar .navbar-nav .navbar-item.active {
+  background-color: #FF0066 !important;
+}
+
+* body main .lg-navbar .navbar-nav .logout-item {
+  position: absolute;
+  bottom: 0;
+}
+
+* body main .main-container {
+  width: 91%;
+  height: 100%;
+  position: absolute;
+  left: 9%;
+}
+
+* body main .main-container .title-section {
+  width: 100%;
+  height: 15%;
+}
+
+* body main .main-container .title-section .title {
+  width: 80%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.500vw;
+  float: left;
+  color: #FF0066;
+}
+
+* body main .main-container .title-section .switch-div {
+  width: 20%;
+  height: 100%;
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+* body main .main-container .title-section .switch-div > label {
+  width: 50%;
+  height: 40%;
+  background-color: white;
+  border-radius: 2.5rem;
+}
+
+* body main .main-container .title-section .switch-div > label > button {
+  width: 40%;
+  height: 90%;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  margin: 2% 4%;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+* body main .main-container .title-section .switch-div > label > button > img {
+  width: 50%;
+}
+
+* body main .main-container .grid-tiles .card-container, * body main .main-container .grid-tiles .grid-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+* body main .main-container .grid-tiles .card-container .tile, * body main .main-container .grid-tiles .grid-container .tile {
+  -webkit-box-flex: 23%;
+      -ms-flex: 23%;
+          flex: 23%;
+  max-width: 23%;
+  margin: 0 4px;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card, * body main .main-container .grid-tiles .grid-container .tile .card {
+  width: 96%;
+  background-color: #fff;
+  border-radius: 10px;
+  float: left;
+  margin: 1% 1% 1% 0;
+  position: relative;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card > .container, * body main .main-container .grid-tiles .grid-container .tile .card > .container {
+  padding: 5%;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card > .container > img, * body main .main-container .grid-tiles .grid-container .tile .card > .container > img {
+  width: 100%;
+  height: 16.666666666666668vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card > .container .tag, * body main .main-container .grid-tiles .grid-container .tile .card > .container .tag {
+  padding: 0px 10px;
+  border-radius: 10px;
+  background-color: #F6C937;
+  font-size: 0.972vw;
+  font-family: "OpenSansBold";
+  color: #fff;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card > .container .card-title, * body main .main-container .grid-tiles .grid-container .tile .card > .container .card-title {
+  font-size: 1.667vw;
+  color: #2B2ECF;
+  font-family: "PoppinsSemiBold";
+  padding: 0.5vw;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card > .container .card-description, * body main .main-container .grid-tiles .grid-container .tile .card > .container .card-description {
+  color: #7F8A9C;
+  font-size: 1.250vw;
+  font-family: "OpenSansRegular";
+  padding: 0.5vw;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card > .container .respond-icons, * body main .main-container .grid-tiles .grid-container .tile .card > .container .respond-icons {
+  text-align: right;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card > .container .respond-icons div, * body main .main-container .grid-tiles .grid-container .tile .card > .container .respond-icons div {
+  width: 20%;
+  float: right;
+  text-align: center;
+  padding: 1.66667vh 0;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card > .container .respond-icons div > img, * body main .main-container .grid-tiles .grid-container .tile .card > .container .respond-icons div > img {
+  width: 40%;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card .selectBox, * body main .main-container .grid-tiles .grid-container .tile .card .selectBox {
+  position: absolute;
+  width: 1.25625rem;
+  height: 1.25625rem;
+  border: 2px solid #fff;
+  top: 5%;
+  right: 6%;
+  border-radius: 100%;
+  display: none;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card .selectBox > input, * body main .main-container .grid-tiles .grid-container .tile .card .selectBox > input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card .selectBox .checkmark, * body main .main-container .grid-tiles .grid-container .tile .card .selectBox .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: transparent;
+  border-radius: 100%;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card .selectBox .checkmark:after, * body main .main-container .grid-tiles .grid-container .tile .card .selectBox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card .selectBox > .checkmark:after, * body main .main-container .grid-tiles .grid-container .tile .card .selectBox > .checkmark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card .selectBox:hover input ~ .checkmark, * body main .main-container .grid-tiles .grid-container .tile .card .selectBox:hover input ~ .checkmark {
+  background-color: transparent;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card .selectBox > input:checked ~ .checkmark, * body main .main-container .grid-tiles .grid-container .tile .card .selectBox > input:checked ~ .checkmark {
+  background-color: #6ef1b8;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card .selectBox > input:checked ~ .checkmark:after, * body main .main-container .grid-tiles .grid-container .tile .card .selectBox > input:checked ~ .checkmark:after {
+  display: block;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card:hover, * body main .main-container .grid-tiles .grid-container .tile .card:hover {
+  background-color: linear-gradient(135deg, #2B2ECF 0%, #652BCF 100%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: 0 5px 20px 0px rgba(43, 46, 207, 0.5);
+          box-shadow: 0 5px 20px 0px rgba(43, 46, 207, 0.5);
+}
+
+* body main .main-container .grid-tiles .card-container .tile .card:hover .selectBox, * body main .main-container .grid-tiles .grid-container .tile .card:hover .selectBox {
+  display: block;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .grid, * body main .main-container .grid-tiles .grid-container .tile .grid {
+  width: 96%;
+  background-color: #fff;
+  border-radius: 10px;
+  float: left;
+  margin: 1% 1% 1% 0;
+  height: 8.88889vh;
+  padding: 2%;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .grid .grid-img, * body main .main-container .grid-tiles .grid-container .tile .grid .grid-img {
+  width: 25%;
+  height: 100%;
+  float: left;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .grid .grid-img > img, * body main .main-container .grid-tiles .grid-container .tile .grid .grid-img > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10%;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .grid .grid-Desc, * body main .main-container .grid-tiles .grid-container .tile .grid .grid-Desc {
+  width: 60%;
+  height: 100%;
+  float: left;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .grid .grid-Desc > h3, * body main .main-container .grid-tiles .grid-container .tile .grid .grid-Desc > h3 {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 0.83333vw;
+  color: #2B2ECF;
+  font-size: 1.667vw;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .grid .grid-resp, * body main .main-container .grid-tiles .grid-container .tile .grid .grid-resp {
+  width: 15%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  float: left;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .grid .grid-resp > img, * body main .main-container .grid-tiles .grid-container .tile .grid .grid-resp > img {
+  width: 50%;
+}
+
+* body main .main-container .grid-tiles .card-container .tile .grid:hover, * body main .main-container .grid-tiles .grid-container .tile .grid:hover {
+  background-color: linear-gradient(135deg, #2B2ECF 0%, #652BCF 100%);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-box-shadow: 0 5px 20px 0px rgba(43, 46, 207, 0.5);
+          box-shadow: 0 5px 20px 0px rgba(43, 46, 207, 0.5);
+}
+
+* body main .main-container .selected-DataDiv {
+  position: absolute;
+  width: 29.65278vw;
+  height: 8.88889vh;
+  bottom: 5%;
+  left: 25%;
+  display: none;
+}
+
+* body main .main-container .selected-DataDiv .container {
+  height: 100%;
+  border-radius: 50px;
+  width: 100%;
+  background-image: linear-gradient(135deg, #2B2ECF 0%, #652BCF 100%);
+}
+
+* body main .main-container .selected-DataDiv .container .deSelect {
+  width: 20%;
+  height: 100%;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+* body main .main-container .selected-DataDiv .container .deSelect > img {
+  width: 35%;
+}
+
+* body main .main-container .selected-DataDiv .container .selectedCount {
+  width: 55%;
+  height: 100%;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body main .main-container .selected-DataDiv .container .selectedCount > h3 {
+  font-size: 1.66667vw;
+  font-family: "OpenSansBold";
+  color: #fff;
+}
+
+* body main .main-container .selected-DataDiv .container .shareLike {
+  width: 20%;
+  height: 100%;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* body main .main-container .selected-DataDiv .container .shareLike > img {
+  width: 40%;
+  padding: 0.83333vw;
+}
+
+.active {
+  background-color: #2B2ECF !important;
+}
+
+#listContainer {
+  display: none;
+}
+
+@media only screen and (max-width: 600px) {
+  /* For Mobiles */
+  .xs-navbar {
+    width: 100%;
+    height: 60vh;
+    background-image: url("../images/xs-bg.png");
+    background-size: 100%;
+    position: relative;
+    display: block !important;
+  }
+  .xs-navbar .navbar-brand {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .xs-navbar .navbar-brand img {
+    width: 60%;
+    height: 60%;
+  }
+  .xs-navbar .navbar-toggler {
+    position: absolute;
+    top: 7%;
+    right: 5%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .xs-navbar .title {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 2.625rem;
+    text-shadow: 4px 4px #32261A;
+    text-align: center;
+    padding: 0 5%;
+    color: #fff;
+    z-index: 1;
+  }
+  .tile {
+    -webkit-box-flex: 100% !important;
+        -ms-flex: 100% !important;
+            flex: 100% !important;
+    max-width: 100% !important;
+    margin: 0 15px !important;
+  }
+  .tile .card .container > img {
+    height: 27.77778vh !important;
+  }
+  .tile .card .container .tag {
+    font-size: 2.77778vw !important;
+  }
+  .tile .card .container .card-title {
+    font-size: 5.20833vw !important;
+  }
+  .tile .card .container .card-description {
+    font-size: 3.47222vw !important;
+  }
+  .tile .grid {
+    height: 10.88889vh !important;
+  }
+  .tile .grid-Desc > h3 {
+    font-size: 5.667vw !important;
+    padding-left: 2.83333vw !important;
+  }
+  .main-container {
+    width: 100% !important;
+    left: 0 !important;
+  }
+  .title-section {
+    height: 10% !important;
+  }
+  .title-section .title {
+    display: none !important;
+  }
+  .title-section .switch-div {
+    position: relative;
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .title-section .switch-div #wave {
+    width: 100%;
+    height: 100% !important;
+    position: absolute;
+    top: -100%;
+  }
+  .title-section .switch-div > label {
+    width: 23% !important;
+    margin-top: -20% !important;
+    z-index: 1 !important;
+    height: 55% !important;
+  }
+  .lg-navbar {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .xs-container {
+    height: 50vh;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  /* For Small Mobiles */
+  .xs-container {
+    height: 60vh;
+  }
+}
+/*# sourceMappingURL=style.css.map */
