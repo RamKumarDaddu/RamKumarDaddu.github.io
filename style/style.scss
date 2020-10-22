@@ -1,9 +1,5 @@
 @import 'variables.scss';
 
-:root {
-    font-size: 16px;
-}
-    
 * {
     margin: 0;
     padding: 0;
@@ -47,6 +43,7 @@
                         align-items: center;
                         justify-content: center;
                         border-radius: 50%;
+                        cursor: pointer;
                         > img {
                             width: 35%;
                         }
@@ -84,7 +81,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        >label {
+                        > .toggle-switch {
                             width: 50%;
                             height: 40%;
                             background-color: white;
@@ -215,7 +212,6 @@
                                     }
                                 }
                                 &:hover {
-                                    background-color: $bannerBgColor;
                                     transition: all 0.5s ease;
                                     box-shadow: 0 5px 20px 0px rgba(43, 46, 207, 0.5);
                                 }
@@ -268,7 +264,6 @@
                                     }
                                 }
                                 &:hover {
-                                    background-color: $bannerBgColor;
                                     transition: all 0.5s ease;
                                     box-shadow: 0 5px 20px 0px rgba(43, 46, 207, 0.5);
                                 }
@@ -337,7 +332,11 @@
 #listContainer {
     display: none;
 }
+#wave {
+    display: none;
+}
 
+/*------------- Media Queries for Responsive --------------*/
 @media only screen and (max-width: 600px) {
     /* For Mobiles */
     .xs-navbar {
@@ -400,6 +399,13 @@
                 .card-description {
                     font-size: $oneVw * 50 !important;
                 }
+                .respond-icons {
+                    > div {
+                        >img {
+                            width: 30% !important;
+                        }
+                    }
+                }
             }
         }
         .grid {
@@ -429,14 +435,14 @@
                 width: 100%;
                 height: 100% !important;
                 position: absolute;
-                top: -100%;
+                top: -125%;
+                display: block;
             }
-            >label {
+            .toggle-switch {
                 width: 23% !important;
                 margin-top: -20% !important;
                 z-index: 1 !important;
                 height: 55% !important;
-                // display: none !important;
             }
         }
     }
@@ -444,14 +450,27 @@
         display: none;
     }
 }
-@media only screen and (max-width: 375px) {
-    .xs-container {
-        height: 50vh;
+@media only screen and (min-width: 1366px) {
+    /* For Laptops */
+    .lg-navbar {
+        width: 4.2% !important;
+    }
+    .title {
+        font-size: 2vw !important;
+    }
+    .toggle-switch {
+        width: 35% !important;
     }
 }
-@media only screen and (max-width: 320px) {
-    /* For Small Mobiles */
-    .xs-container {
-        height: 60vh;
+@media only screen and (min-width: 1400px) {
+    /* For Laptops */
+    .lg-navbar {
+        width: 5% !important;
+    }
+    .title {
+        font-size: 2.5vw !important;
+    }
+    .toggle-switch {
+        width: 50% !important;
     }
 }

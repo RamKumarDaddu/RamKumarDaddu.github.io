@@ -25,10 +25,6 @@
 /*======= Font family =======*/
 /*======= Font Colors =======*/
 /********** Font Sizes ***********/
-:root {
-  font-size: 16px;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -91,6 +87,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 * body main .lg-navbar .navbar-nav .navbar-item > img {
@@ -147,14 +144,14 @@
           justify-content: center;
 }
 
-* body main .main-container .title-section .switch-div > label {
+* body main .main-container .title-section .switch-div > .toggle-switch {
   width: 50%;
   height: 40%;
   background-color: white;
   border-radius: 2.5rem;
 }
 
-* body main .main-container .title-section .switch-div > label > button {
+* body main .main-container .title-section .switch-div > .toggle-switch > button {
   width: 40%;
   height: 90%;
   background-color: transparent;
@@ -174,7 +171,7 @@
           justify-content: center;
 }
 
-* body main .main-container .title-section .switch-div > label > button > img {
+* body main .main-container .title-section .switch-div > .toggle-switch > button > img {
   width: 50%;
 }
 
@@ -311,7 +308,6 @@
 }
 
 * body main .main-container .grid-tiles .card-container .tile .card:hover, * body main .main-container .grid-tiles .grid-container .tile .card:hover {
-  background-color: linear-gradient(135deg, #2B2ECF 0%, #652BCF 100%);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-box-shadow: 0 5px 20px 0px rgba(43, 46, 207, 0.5);
@@ -386,7 +382,6 @@
 }
 
 * body main .main-container .grid-tiles .card-container .tile .grid:hover, * body main .main-container .grid-tiles .grid-container .tile .grid:hover {
-  background-color: linear-gradient(135deg, #2B2ECF 0%, #652BCF 100%);
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   -webkit-box-shadow: 0 5px 20px 0px rgba(43, 46, 207, 0.5);
@@ -471,6 +466,11 @@
   display: none;
 }
 
+#wave {
+  display: none;
+}
+
+/*------------- Media Queries for Responsive --------------*/
 @media only screen and (max-width: 600px) {
   /* For Mobiles */
   .xs-navbar {
@@ -540,6 +540,9 @@
   .tile .card .container .card-description {
     font-size: 3.47222vw !important;
   }
+  .tile .card .container .respond-icons > div > img {
+    width: 30% !important;
+  }
   .tile .grid {
     height: 10.88889vh !important;
   }
@@ -566,9 +569,10 @@
     width: 100%;
     height: 100% !important;
     position: absolute;
-    top: -100%;
+    top: -125%;
+    display: block;
   }
-  .title-section .switch-div > label {
+  .title-section .switch-div .toggle-switch {
     width: 23% !important;
     margin-top: -20% !important;
     z-index: 1 !important;
@@ -579,16 +583,29 @@
   }
 }
 
-@media only screen and (max-width: 375px) {
-  .xs-container {
-    height: 50vh;
+@media only screen and (min-width: 1366px) {
+  /* For Laptops */
+  .lg-navbar {
+    width: 4.2% !important;
+  }
+  .title {
+    font-size: 2vw !important;
+  }
+  .toggle-switch {
+    width: 35% !important;
   }
 }
 
-@media only screen and (max-width: 320px) {
-  /* For Small Mobiles */
-  .xs-container {
-    height: 60vh;
+@media only screen and (min-width: 1400px) {
+  /* For Laptops */
+  .lg-navbar {
+    width: 5% !important;
+  }
+  .title {
+    font-size: 2.5vw !important;
+  }
+  .toggle-switch {
+    width: 50% !important;
   }
 }
 /*# sourceMappingURL=style.css.map */

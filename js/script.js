@@ -1,7 +1,7 @@
 /*--------- Svg responive -------------*/
 function xsScreen(){
-    width = window.innerWidth
-    console.log(width)
+    console.log("fn: xsScreen");
+    width = window.innerWidth;
     if(width > 320 && width < 375){
         var ele = document.getElementsByTagName("svg")[0];
         ele.removeAttribute('viewBox')
@@ -18,6 +18,7 @@ xsScreen();
 /*---------------------------*/
 
 var toggleCollapseContent = () => {
+    console.log("fn: toggleCollapseContent");
     var navBar = document.getElementById('xsNavItems');
     setTimeout(function () {
         navBar.classList.toggle("toggle");
@@ -25,6 +26,7 @@ var toggleCollapseContent = () => {
 }
 
 var showData = (id) => {
+    console.log("fn: showData");
     if(id === 'gridView') {
         var element = document.getElementById("listView");
         element.classList.remove("active");
@@ -44,6 +46,7 @@ var showData = (id) => {
 /*------------ Checked Data --------------*/
 var selectedData = []
 var selectPlace = (id) => {
+    console.log("fn: selectPlace")
     var ele = document.getElementById(id);
     var flag = ele.checked;
     if(flag === true) {

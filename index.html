@@ -10,10 +10,10 @@
     <main>
         <nav class="xs-navbar">
             <a class="navbar-brand" href="#">
-                <img src="images/logo.svg" alt="Logo" title="Logo" srcset="">
+                <img src="images/logo.svg" alt="Logo" title="Logo" >
             </a>
             <button class="navbar-toggler" type="button" onclick="toggleCollapseContent()">
-                <img src="images/menu.svg" alt="Menu" srcset="">
+                <img src="images/menu.svg" alt="Menu" >
             </button>
             <h1 class="title">Discover great places to visit</h1>
         </nav>
@@ -51,10 +51,10 @@
                             <path fill="#E7EDF6" fill-opacity="1" d="M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                         </svg>
                     </div>
-                    <label>
-                        <button onclick="showData(this.id)" id="gridView" class="active"><img src="images/grid-view-icon.svg" alt="Grid-view" srcset=""></button>
-                        <button onclick="showData(this.id)" id="listView"><img src="images/list-view-icon.svg" alt="List-View" srcset=""></button>
-                    </label>
+                    <div class="toggle-switch">
+                        <button onclick="showData(this.id)" id="gridView" class="active"><img src="images/grid-view-icon.svg" alt="Grid-view" ></button>
+                        <button onclick="showData(this.id)" id="listView"><img src="images/list-view-icon.svg" alt="List-View" ></button>
+                    </div>
                 </div>
             </div>
             <div id="gridContainer" class="grid-tiles">
@@ -62,7 +62,7 @@
                     <div class="tile">
                         <div class="card" id="khartoum">
                             <div class="container">
-                                <img src="images/Khartoum.png" alt="" srcset="">
+                                <img src="images/Khartoum.png" alt="" >
                                 <label>
                                     <span class="tag">Wellington</span>
                                     <span class="tag">Tianjin</span>
@@ -72,8 +72,8 @@
                                     Aenean lacinia bibendum nulla sed consectetur.
                                 </p>
                                 <div class="respond-icons">
-                                    <div><img src="images/heart.svg" alt="Like" srcset=""></div>
-                                    <div><img src="images/message-square.svg" alt="Message" srcset=""></div>
+                                    <div><img src="images/heart.svg" alt="Like" ></div>
+                                    <div><img src="images/message-square.svg" alt="Message" ></div>
                                 </div>
                                 <label class="selectBox">
                                     <input type="checkbox" id="selectedKhartoum" onclick="selectPlace(this.id)">
@@ -83,7 +83,7 @@
                         </div>
                         <div class="card" id="fairbanks">
                             <div class="container">
-                                <img src="images/Fairbanks.png" alt="Fairbanks" srcset="">
+                                <img src="images/Fairbanks.png" alt="Fairbanks" >
                                 <label>
                                     <span class="tag">Belgrade</span>
                                     <span class="tag">Cali</span>
@@ -94,8 +94,8 @@
                                     Pellentesque ornare sem lacinia quam venenatis vestibulum.
                                 </p>
                                 <div class="respond-icons">
-                                    <div><img src="images/heart.svg" alt="Like" srcset=""></div>
-                                    <div><img src="images/message-square.svg" alt="Message" srcset=""></div>
+                                    <div><img src="images/heart.svg" alt="Like" ></div>
+                                    <div><img src="images/message-square.svg" alt="Message" ></div>
                                 </div>
                                 <label class="selectBox">
                                     <input type="checkbox" id="selectedFairbanks" onclick="selectPlace(this.id)">
@@ -107,7 +107,7 @@
                     <div class="tile">
                         <div class="card" id="santaClara">
                             <div class="container">
-                                <img src="images/santa-clara.png" alt="santaClara" srcset="">
+                                <img src="images/santa-clara.png" alt="santaClara" >
                                 <label>
                                     <span class="tag">Salt Lake City</span>
                                     <span class="tag">Seville</span>
@@ -117,8 +117,8 @@
                                     Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
                                 </p>
                                 <div class="respond-icons">
-                                    <div><img src="images/heart.svg" alt="Like" srcset=""></div>
-                                    <div><img src="images/message-square.svg" alt="Message" srcset=""></div>
+                                    <div><img src="images/heart.svg" alt="Like" ></div>
+                                    <div><img src="images/message-square.svg" alt="Message" ></div>
                                 </div>
                                 <label class="selectBox">
                                     <input type="checkbox" id="selectedSantaClara" onclick="selectPlace(this.id)">
@@ -128,7 +128,7 @@
                         </div>
                         <div class="card" id="sofia">
                             <div class="container">
-                                <img src="images/Sofia.png" alt="Sofia" srcset="">
+                                <img src="images/Sofia.png" alt="Sofia" >
                                 <label>
                                     <span class="tag">Trondheim</span>
                                     <span class="tag">Xian</span>
@@ -138,8 +138,8 @@
                                     Pellentesque ornare sem lacinia quam venenatis vestibulum.
                                 </p>
                                 <div class="respond-icons">
-                                    <div><img src="images/heart.svg" alt="Like" srcset=""></div>
-                                    <div><img src="images/message-square.svg" alt="Message" srcset=""></div>
+                                    <div><img src="images/heart.svg" alt="Like" ></div>
+                                    <div><img src="images/message-square.svg" alt="Message" ></div>
                                 </div>
                                 <label class="selectBox">
                                     <input type="checkbox" id="selectedSofia" onclick="selectPlace(this.id)">
@@ -151,7 +151,7 @@
                     <div class="tile">
                         <div class="card" id="bengaluru">
                             <div class="container">
-                                <img src="images/Bengaluru.png" alt="Bengaluru" srcset="">
+                                <img src="images/Bengaluru.png" alt="Bengaluru" >
                                 <label>
                                     <span class="tag">Puebla</span>
                                 </label>
@@ -160,8 +160,8 @@
                                     Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
                                 </p>
                                 <div class="respond-icons">
-                                    <div><img src="images/heart.svg" alt="Like" srcset=""></div>
-                                    <div><img src="images/message-square.svg" alt="Message" srcset=""></div>
+                                    <div><img src="images/heart.svg" alt="Like" ></div>
+                                    <div><img src="images/message-square.svg" alt="Message" ></div>
                                 </div>
                                 <label class="selectBox">
                                     <input type="checkbox" id="selectedBengaluru" onclick="selectPlace(this.id)">
@@ -171,7 +171,7 @@
                         </div>
                         <div class="card" id="belfast">
                             <div class="container" id="Belfast">
-                                <img src="images/Belfast.png" alt="Belfast" srcset="">
+                                <img src="images/Belfast.png" alt="Belfast" >
                                 <label>
                                     <span class="tag">Aarhus</span>
                                     <span class="tag">Ankara</span>
@@ -181,8 +181,8 @@
                                     Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.
                                 </p>
                                 <div class="respond-icons">
-                                    <div><img src="images/heart.svg" alt="Like" srcset=""></div>
-                                    <div><img src="images/message-square.svg" alt="Message" srcset=""></div>
+                                    <div><img src="images/heart.svg" alt="Like" ></div>
+                                    <div><img src="images/message-square.svg" alt="Message" ></div>
                                 </div>
                                 <label class="selectBox">
                                     <input type="checkbox" id="selectedBelfast" onclick="selectPlace(this.id)">
@@ -194,7 +194,7 @@
                     <div class="tile">
                         <div class="card" id="portland">
                             <div class="container">
-                                <img src="images/Portland.png" alt="Portland" srcset="">
+                                <img src="images/Portland.png" alt="Portland" >
                                 <label>
                                     <span class="tag">Sacramento</span>
                                     <span class="tag">Osaka</span>
@@ -205,8 +205,8 @@
                                     Tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
                                 </p>
                                 <div class="respond-icons">
-                                    <div><img src="images/heart.svg" alt="Like" srcset=""></div>
-                                    <div><img src="images/message-square.svg" alt="Message" srcset=""></div>
+                                    <div><img src="images/heart.svg" alt="Like" ></div>
+                                    <div><img src="images/message-square.svg" alt="Message" ></div>
                                 </div>
                                 <label class="selectBox">
                                     <input type="checkbox" id="selectedPortland" onclick="selectPlace(this.id)">
@@ -216,7 +216,7 @@
                         </div>
                         <div class="card" id="pune">
                             <div class="container">
-                                <img src="images/Pune.png" alt="Pune" srcset="">
+                                <img src="images/Pune.png" alt="Pune" >
                                 <label>
                                     <span class="tag">Sylhet</span>
                                 </label>
@@ -225,8 +225,8 @@
                                     Mauris condimentum nibh, ut fermentum massa justo sit amet risus.
                                 </p>
                                 <div class="respond-icons">
-                                    <div><img src="images/heart.svg" alt="Like" srcset=""></div>
-                                    <div><img src="images/message-square.svg" alt="Message" srcset=""></div>
+                                    <div><img src="images/heart.svg" alt="Like" ></div>
+                                    <div><img src="images/message-square.svg" alt="Message" ></div>
                                 </div>
                                 <label class="selectBox">
                                     <input type="checkbox" id="selectedPune" onclick="selectPlace(this.id)">
@@ -242,7 +242,7 @@
                     <div class="tile">
                         <div class="grid">
                             <div class="grid-img">
-                                <img src="images/Khartoum.png" alt="" srcset="">
+                                <img src="images/Khartoum.png" alt="" >
                             </div>
                             <div class="grid-Desc">
                                 <h3>Khartoum</h3>
@@ -253,7 +253,7 @@
                         </div>
                         <div class="grid">
                             <div class="grid-img">
-                                <img src="images/santa-clara.png" alt="" srcset="">
+                                <img src="images/santa-clara.png" alt="" >
                             </div>
                             <div class="grid-Desc">
                                 <h3>Santa Clara</h3>
@@ -264,7 +264,7 @@
                         </div>
                         <div class="grid">
                             <div class="grid-img">
-                                <img src="images/Bengaluru.png" alt="Bengaluru" srcset="">
+                                <img src="images/Bengaluru.png" alt="Bengaluru" >
                             </div>
                             <div class="grid-Desc">
                                 <h3>Bengaluru</h3>
@@ -275,7 +275,7 @@
                         </div>
                         <div class="grid">
                             <div class="grid-img">
-                                <img src="images/Portland.png" alt="Bengaluru" srcset="">
+                                <img src="images/Portland.png" alt="Bengaluru" >
                             </div>
                             <div class="grid-Desc">
                                 <h3>Portland</h3>
@@ -288,7 +288,7 @@
                     <div class="tile">
                         <div class="grid">
                             <div class="grid-img">
-                                <img src="images/Fairbanks.png" alt="Fairbanks" srcset="">
+                                <img src="images/Fairbanks.png" alt="Fairbanks" >
                             </div>
                             <div class="grid-Desc">
                                 <h3>Fairbanks</h3>
@@ -299,7 +299,7 @@
                         </div>
                         <div class="grid">
                             <div class="grid-img">
-                                <img src="images/Sofia.png" alt="Sofia" srcset="">
+                                <img src="images/Sofia.png" alt="Sofia" >
                             </div>
                             <div class="grid-Desc">
                                 <h3>Sofia</h3>
@@ -310,7 +310,7 @@
                         </div>
                         <div class="grid">
                             <div class="grid-img">
-                                <img src="images/Belfast.png" alt="Belfast" srcset="">
+                                <img src="images/Belfast.png" alt="Belfast" >
                             </div>
                             <div class="grid-Desc">
                                 <h3>Belfast</h3>
@@ -321,7 +321,7 @@
                         </div>
                         <div class="grid">
                             <div class="grid-img">
-                                <img src="images/Pune.png" alt="Pune" srcset="">
+                                <img src="images/Pune.png" alt="Pune" >
                             </div>
                             <div class="grid-Desc">
                                 <h3>Pune</h3>
@@ -334,7 +334,7 @@
                     <div class="tile">
                         <div class="grid">
                             <div class="grid-img">
-                                <img src="images/Khartoum.png" alt="" srcset="">
+                                <img src="images/Khartoum.png" alt="" >
                             </div>
                             <div class="grid-Desc">
                                 <h3>Khartoum</h3>
@@ -345,7 +345,7 @@
                         </div>
                         <div class="grid">
                             <div class="grid-img">
-                                <img src="images/santa-clara.png" alt="" srcset="">
+                                <img src="images/santa-clara.png" alt="" >
                             </div>
                             <div class="grid-Desc">
                                 <h3>Santa Clara</h3>
@@ -356,7 +356,7 @@
                         </div>
                         <div class="grid">
                             <div class="grid-img">
-                                <img src="images/Bengaluru.png" alt="Bengaluru" srcset="">
+                                <img src="images/Bengaluru.png" alt="Bengaluru" >
                             </div>
                             <div class="grid-Desc">
                                 <h3>Bengaluru</h3>
@@ -367,7 +367,7 @@
                         </div>
                         <div class="grid">
                             <div class="grid-img">
-                                <img src="images/Portland.png" alt="Bengaluru" srcset="">
+                                <img src="images/Portland.png" alt="Bengaluru" >
                             </div>
                             <div class="grid-Desc">
                                 <h3>Portland</h3>
@@ -380,7 +380,7 @@
                     <div class="tile">
                         <div class="grid">
                             <div class="grid-img">
-                                <img src="images/Fairbanks.png" alt="Fairbanks" srcset="">
+                                <img src="images/Fairbanks.png" alt="Fairbanks" >
                             </div>
                             <div class="grid-Desc">
                                 <h3>Fairbanks</h3>
@@ -391,7 +391,7 @@
                         </div>
                         <div class="grid">
                             <div class="grid-img">
-                                <img src="images/Sofia.png" alt="Sofia" srcset="">
+                                <img src="images/Sofia.png" alt="Sofia" >
                             </div>
                             <div class="grid-Desc">
                                 <h3>Sofia</h3>
@@ -402,7 +402,7 @@
                         </div>
                         <div class="grid">
                             <div class="grid-img">
-                                <img src="images/Belfast.png" alt="Belfast" srcset="">
+                                <img src="images/Belfast.png" alt="Belfast" >
                             </div>
                             <div class="grid-Desc">
                                 <h3>Belfast</h3>
@@ -413,7 +413,7 @@
                         </div>
                         <div class="grid">
                             <div class="grid-img">
-                                <img src="images/Pune.png" alt="Pune" srcset="">
+                                <img src="images/Pune.png" alt="Pune" >
                             </div>
                             <div class="grid-Desc">
                                 <h3>Pune</h3>
@@ -428,14 +428,14 @@
             <div class="selected-DataDiv" id="selectedDataDiv">
                 <div class="container">
                     <div class="deSelect">
-                        <img src="images/Group.svg" alt="Deselect" srcset="">
+                        <img src="images/Group.svg" alt="Deselect" >
                     </div>
                     <div class="selectedCount">
                         <h3><span id="count">0</span> Item Selected</h3>
                     </div>
                     <div class="shareLike">
-                        <img src="images/heart.svg" alt="Like" srcset="">
-                        <img src="images/Share.svg" alt="Share" srcset="">
+                        <img src="images/heart.svg" alt="Like" >
+                        <img src="images/Share.svg" alt="Share" >
                     </div>
                 </div>
             </div>
