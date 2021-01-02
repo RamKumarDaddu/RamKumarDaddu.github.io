@@ -3,445 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Interview Apty Challange </title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="icon" type="image/png" href="images/logo.svg"/>
+    <title>QUOTE GENERATOR</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Rajdhani&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<body onresize="xsScreen()">
-    <main>
-        <nav class="xs-navbar">
-            <a class="navbar-brand" href="#">
-                <img src="images/logo.svg" alt="Logo" title="Logo" >
-            </a>
-            <button class="navbar-toggler" type="button" onclick="toggleCollapseContent()">
-                <img src="images/menu.svg" alt="Menu" >
-            </button>
-            <h1 class="title">Discover great places to visit</h1>
-        </nav>
-        <nav class="lg-navbar">
-            <div class="navbar-brand">
-                <img src="images/logo.svg" alt="Logo">
-            </div>
-            <ul class="navbar-nav">
-                <li class="navbar-item active">
-                    <img src="images/home.svg" alt="Home">
-                </li>
-                <li class="navbar-item ">
-                    <img src="images/briefcase.svg" alt="Details">
-                </li>
-                <li class="navbar-item ">
-                    <img src="images/compass.svg" alt="Locations">
-                </li>
-                <li class="navbar-item ">
-                    <img src="images/bell.svg" alt="Notifications">
-                </li>
-                <li class="navbar-item ">
-                    <img src="images/gear.svg" alt="Settings">
-                </li>
-                <li class="navbar-item logout-item">
-                    <img src="images/log-out.svg" alt="log-out">
-                </li>
-            </ul>
-        </nav>
-        <div class="main-container">
-            <div class="title-section">
-                <h1 class="title">Discover great places to visit</h1>
-                <div class="switch-div">
-                    <div id="wave">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                            <path fill="#E7EDF6" fill-opacity="1" d="M0,256L48,229.3C96,203,192,149,288,154.7C384,160,480,224,576,218.7C672,213,768,139,864,128C960,117,1056,171,1152,197.3C1248,224,1344,224,1392,224L1440,224L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
-                        </svg>
-                    </div>
-                    <div class="toggle-switch">
-                        <button onclick="showData(this.id)" id="gridView" class="active"><img src="images/grid-view-icon.svg" alt="Grid-view" ></button>
-                        <button onclick="showData(this.id)" id="listView"><img src="images/list-view-icon.svg" alt="List-View" ></button>
-                    </div>
-                </div>
-            </div>
-            <div id="gridContainer" class="grid-tiles">
-                <div class="card-container">
-                    <div class="tile">
-                        <div class="card" id="khartoum">
-                            <div class="container">
-                                <img src="images/Khartoum.png" alt="" >
-                                <label>
-                                    <span class="tag">Wellington</span>
-                                    <span class="tag">Tianjin</span>
-                                </label>
-                                <h3 class="card-title" id="khartoum_title">Khartoum</h3>
-                                <p class="card-description" id="khartoum_descrip">
-                                    Aenean lacinia bibendum nulla sed consectetur.
-                                </p>
-                                <div class="respond-icons">
-                                    <div><img src="images/heart.svg" alt="Like" ></div>
-                                    <div><img src="images/message-square.svg" alt="Message" ></div>
-                                </div>
-                                <label class="selectBox">
-                                    <input type="checkbox" id="selectedKhartoum" onclick="selectPlace(this.id)">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="card" id="fairbanks">
-                            <div class="container">
-                                <img src="images/Fairbanks.png" alt="Fairbanks" >
-                                <label>
-                                    <span class="tag">Belgrade</span>
-                                    <span class="tag">Cali</span>
-                                    <span class="tag">Stockholm</span>
-                                </label>
-                                <h3 class="card-title" id="fairbanks_title">Fairbanks</h3>
-                                <p class="card-description" id="fairbanks_descrip">
-                                    Pellentesque ornare sem lacinia quam venenatis vestibulum.
-                                </p>
-                                <div class="respond-icons">
-                                    <div><img src="images/heart.svg" alt="Like" ></div>
-                                    <div><img src="images/message-square.svg" alt="Message" ></div>
-                                </div>
-                                <label class="selectBox">
-                                    <input type="checkbox" id="selectedFairbanks" onclick="selectPlace(this.id)">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tile">
-                        <div class="card" id="santaClara">
-                            <div class="container">
-                                <img src="images/santa-clara.png" alt="santaClara" >
-                                <label>
-                                    <span class="tag">Salt Lake City</span>
-                                    <span class="tag">Seville</span>
-                                </label>
-                                <h3 class="card-title" id="santaClara_title">Santa Clara</h3>
-                                <p class="card-description" id="santaClara_descrip">
-                                    Praesent commodo cursus magna, vel scelerisque nisl consectetur et.
-                                </p>
-                                <div class="respond-icons">
-                                    <div><img src="images/heart.svg" alt="Like" ></div>
-                                    <div><img src="images/message-square.svg" alt="Message" ></div>
-                                </div>
-                                <label class="selectBox">
-                                    <input type="checkbox" id="selectedSantaClara" onclick="selectPlace(this.id)">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="card" id="sofia">
-                            <div class="container">
-                                <img src="images/Sofia.png" alt="Sofia" >
-                                <label>
-                                    <span class="tag">Trondheim</span>
-                                    <span class="tag">Xian</span>
-                                </label>
-                                <h3 class="card-title" id="sofia_title">Sofia</h3>
-                                <p class="card-description" id="sofia_descrip">
-                                    Pellentesque ornare sem lacinia quam venenatis vestibulum.
-                                </p>
-                                <div class="respond-icons">
-                                    <div><img src="images/heart.svg" alt="Like" ></div>
-                                    <div><img src="images/message-square.svg" alt="Message" ></div>
-                                </div>
-                                <label class="selectBox">
-                                    <input type="checkbox" id="selectedSofia" onclick="selectPlace(this.id)">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tile">
-                        <div class="card" id="bengaluru">
-                            <div class="container">
-                                <img src="images/Bengaluru.png" alt="Bengaluru" >
-                                <label>
-                                    <span class="tag">Puebla</span>
-                                </label>
-                                <h3 class="card-title" id="bengaluru_title">Bengaluru</h3>
-                                <p class="card-description" id="bengaluru_descrip">
-                                    Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                                </p>
-                                <div class="respond-icons">
-                                    <div><img src="images/heart.svg" alt="Like" ></div>
-                                    <div><img src="images/message-square.svg" alt="Message" ></div>
-                                </div>
-                                <label class="selectBox">
-                                    <input type="checkbox" id="selectedBengaluru" onclick="selectPlace(this.id)">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="card" id="belfast">
-                            <div class="container" id="Belfast">
-                                <img src="images/Belfast.png" alt="Belfast" >
-                                <label>
-                                    <span class="tag">Aarhus</span>
-                                    <span class="tag">Ankara</span>
-                                </label>
-                                <h3 class="card-title" id="belfast_title">Belfast</h3>
-                                <p class="card-description" id="belfast_descrip">
-                                    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla.
-                                </p>
-                                <div class="respond-icons">
-                                    <div><img src="images/heart.svg" alt="Like" ></div>
-                                    <div><img src="images/message-square.svg" alt="Message" ></div>
-                                </div>
-                                <label class="selectBox">
-                                    <input type="checkbox" id="selectedBelfast" onclick="selectPlace(this.id)">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tile">
-                        <div class="card" id="portland">
-                            <div class="container">
-                                <img src="images/Portland.png" alt="Portland" >
-                                <label>
-                                    <span class="tag">Sacramento</span>
-                                    <span class="tag">Osaka</span>
-                                    <span class="tag">Astana</span>
-                                </label>
-                                <h3 class="card-title" id="portland_title">Portland</h3>
-                                <p class="card-description" id="portland_descrip">
-                                    Tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                                </p>
-                                <div class="respond-icons">
-                                    <div><img src="images/heart.svg" alt="Like" ></div>
-                                    <div><img src="images/message-square.svg" alt="Message" ></div>
-                                </div>
-                                <label class="selectBox">
-                                    <input type="checkbox" id="selectedPortland" onclick="selectPlace(this.id)">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="card" id="pune">
-                            <div class="container">
-                                <img src="images/Pune.png" alt="Pune" >
-                                <label>
-                                    <span class="tag">Sylhet</span>
-                                </label>
-                                <h3 class="card-title" id="pune_title">Pune</h3>
-                                <p class="card-description" id="pune_descrip">
-                                    Mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-                                </p>
-                                <div class="respond-icons">
-                                    <div><img src="images/heart.svg" alt="Like" ></div>
-                                    <div><img src="images/message-square.svg" alt="Message" ></div>
-                                </div>
-                                <label class="selectBox">
-                                    <input type="checkbox" id="selectedPune" onclick="selectPlace(this.id)">
-                                    <span class="checkmark"></span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div id="listContainer" class="grid-tiles">
-                <div class="grid-container">
-                    <div class="tile">
-                        <div class="grid">
-                            <div class="grid-img">
-                                <img src="images/Khartoum.png" alt="" >
-                            </div>
-                            <div class="grid-Desc">
-                                <h3>Khartoum</h3>
-                            </div>
-                            <div class="grid-resp">
-                                <img src="images/heart.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="grid-img">
-                                <img src="images/santa-clara.png" alt="" >
-                            </div>
-                            <div class="grid-Desc">
-                                <h3>Santa Clara</h3>
-                            </div>
-                            <div class="grid-resp">
-                                <img src="images/heart.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="grid-img">
-                                <img src="images/Bengaluru.png" alt="Bengaluru" >
-                            </div>
-                            <div class="grid-Desc">
-                                <h3>Bengaluru</h3>
-                            </div>
-                            <div class="grid-resp">
-                                <img src="images/heart.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="grid-img">
-                                <img src="images/Portland.png" alt="Bengaluru" >
-                            </div>
-                            <div class="grid-Desc">
-                                <h3>Portland</h3>
-                            </div>
-                            <div class="grid-resp">
-                                <img src="images/heart.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tile">
-                        <div class="grid">
-                            <div class="grid-img">
-                                <img src="images/Fairbanks.png" alt="Fairbanks" >
-                            </div>
-                            <div class="grid-Desc">
-                                <h3>Fairbanks</h3>
-                            </div>
-                            <div class="grid-resp">
-                                <img src="images/heart.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="grid-img">
-                                <img src="images/Sofia.png" alt="Sofia" >
-                            </div>
-                            <div class="grid-Desc">
-                                <h3>Sofia</h3>
-                            </div>
-                            <div class="grid-resp">
-                                <img src="images/heart.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="grid-img">
-                                <img src="images/Belfast.png" alt="Belfast" >
-                            </div>
-                            <div class="grid-Desc">
-                                <h3>Belfast</h3>
-                            </div>
-                            <div class="grid-resp">
-                                <img src="images/heart.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="grid-img">
-                                <img src="images/Pune.png" alt="Pune" >
-                            </div>
-                            <div class="grid-Desc">
-                                <h3>Pune</h3>
-                            </div>
-                            <div class="grid-resp">
-                                <img src="images/heart.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tile">
-                        <div class="grid">
-                            <div class="grid-img">
-                                <img src="images/Khartoum.png" alt="" >
-                            </div>
-                            <div class="grid-Desc">
-                                <h3>Khartoum</h3>
-                            </div>
-                            <div class="grid-resp">
-                                <img src="images/heart.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="grid-img">
-                                <img src="images/santa-clara.png" alt="" >
-                            </div>
-                            <div class="grid-Desc">
-                                <h3>Santa Clara</h3>
-                            </div>
-                            <div class="grid-resp">
-                                <img src="images/heart.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="grid-img">
-                                <img src="images/Bengaluru.png" alt="Bengaluru" >
-                            </div>
-                            <div class="grid-Desc">
-                                <h3>Bengaluru</h3>
-                            </div>
-                            <div class="grid-resp">
-                                <img src="images/heart.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="grid-img">
-                                <img src="images/Portland.png" alt="Bengaluru" >
-                            </div>
-                            <div class="grid-Desc">
-                                <h3>Portland</h3>
-                            </div>
-                            <div class="grid-resp">
-                                <img src="images/heart.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tile">
-                        <div class="grid">
-                            <div class="grid-img">
-                                <img src="images/Fairbanks.png" alt="Fairbanks" >
-                            </div>
-                            <div class="grid-Desc">
-                                <h3>Fairbanks</h3>
-                            </div>
-                            <div class="grid-resp">
-                                <img src="images/heart.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="grid-img">
-                                <img src="images/Sofia.png" alt="Sofia" >
-                            </div>
-                            <div class="grid-Desc">
-                                <h3>Sofia</h3>
-                            </div>
-                            <div class="grid-resp">
-                                <img src="images/heart.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="grid-img">
-                                <img src="images/Belfast.png" alt="Belfast" >
-                            </div>
-                            <div class="grid-Desc">
-                                <h3>Belfast</h3>
-                            </div>
-                            <div class="grid-resp">
-                                <img src="images/heart.svg" alt="">
-                            </div>
-                        </div>
-                        <div class="grid">
-                            <div class="grid-img">
-                                <img src="images/Pune.png" alt="Pune" >
-                            </div>
-                            <div class="grid-Desc">
-                                <h3>Pune</h3>
-                            </div>
-                            <div class="grid-resp">
-                                <img src="images/heart.svg" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="selected-DataDiv" id="selectedDataDiv">
-                <div class="container">
-                    <div class="deSelect">
-                        <img src="images/Group.svg" alt="Deselect" >
-                    </div>
-                    <div class="selectedCount">
-                        <h3><span id="count">0</span> Item Selected</h3>
-                    </div>
-                    <div class="shareLike">
-                        <img src="images/heart.svg" alt="Like" >
-                        <img src="images/Share.svg" alt="Share" >
-                    </div>
-                </div>
-            </div>
+<body>
+    
+<div id="app">
+
+  <div class="fixed" id="banner">
+    <!-- <div class="play-content" id="playContent">
+      <h1>SCAM</h1>
+      <p>enowenoijwehfowefoiwejfijwefjweiofjoweijfiowejweoijweiojf</p>
+      <button class="btn btn-default"><i class="fa fa-play"></i> Play</button>
+    </div> -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide h-100" data-bs-ride="carousel">
+      <div class="carousel-inner h-100">
+        <div class="carousel-item active h-100">
+          <img src="newImages/1.png" style="object-fit: cover;" class="d-block w-100 h-100" alt="...">
         </div>
-    </main>
-    <script src="js/script.js"></script>
+        <div class="carousel-item h-100">
+          <img src="newImages/2.png" style="object-fit: cover;" class="h-100 d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item h-100">
+          <img src="newImages/3.png" style="object-fit: cover;" class="h-100 d-block w-100" alt="...">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scrollable-Content">
+    <template v-if="config && config.movies">
+      <template v-for="item in config.movies">
+        <div class="tile1" :class="item.class" :title="item.title" :id="item.id" @click="showPopup(item)"></div>
+      </template>
+    </template>
+  </div>
+
+  <div id="layer"></div>
+</div>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
