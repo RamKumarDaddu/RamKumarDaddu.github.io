@@ -1,0 +1,217 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*--------------------------------------------------------*/
+
+.fixed {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    /* background-image: url(images/3.png);
+    background-size: cover;
+    background-position: center; */
+}
+.play-content {
+    position: absolute;
+    top: 40%;
+    right: 8%;
+    width: 40%;
+    height: 55%;
+    background-color: rgba(0,0,0,0.3);
+    padding: 15px;
+}
+.popup {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgb(17, 18, 19);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.close-popup {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50%;
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+.video-container {
+    width: 75%;
+    height: auto;
+    /* background-color: white; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+video {
+    width: 100%;
+    height: 100%;
+}
+.scrollable-Content {
+    width: 40%;
+    height: auto;
+    /* background-color: white; */
+    position: absolute;
+    top: 40%;
+    left: 5%;
+}
+.tile1 {
+    width: 48%;
+    height: 150px;
+    background-color: violet;
+    float: left;
+    margin: 1%;
+}
+.SCAM {
+    background-image: url(newImages/SCAM.png);
+    background-size: cover;
+}
+.AakasamNeeHaddura {
+    background-image: url(newImages/AakasamNeeHaddura.png);
+    background-size: cover;
+}
+.Mirzapur {
+    background-image: url(newImages/Mirzapur.png);
+    background-size: cover;
+}
+.LaxmiBomb {
+    background-image: url(newImages/LaxmiBomb.png);
+    background-size: cover;
+}
+.ColorPhoto {
+    background-image: url(newImages/ColorPhoto.png);
+    background-size: cover;
+}
+.Penguin {
+    background-image: url(newImages/Penguin.png);
+    background-size: cover;
+}
+.movie_96 {
+    background-image: url(newImages/96.png);
+    background-size: cover;
+}
+.AlaVaikunthapurramuloo {
+    background-image: url(newImages/AlaVaikunthapurramuloo.png);
+    background-size: cover;
+}
+.ArjunReddy {
+    background-image: url(newImages/ArjunReddy.png);
+    background-size: cover;
+}
+.SyeRaaNarasimhaReddy {
+    background-image: url(newImages/SyeRaaNarasimhaReddy.png);
+    background-size: cover;
+}
+.V {
+    background-image: url(newImages/V.png);
+    background-size: cover;
+}
+.solobrathukesobetter {
+    background-image: url(newImages/solobrathukesobetter.png);
+    background-size: cover;
+}
+.banner_SCAM {
+    background-image: url(newImages/banner_SCAM.png);
+    background-size: cover;
+}
+.banner_SyeRaaNarasimhaReddy {
+    background-image: url(newImages/banner_SyeRaaNarasimhaReddy.png);
+    background-size: cover;
+}
+.banner_AakasamNeeHaddura {
+    background-image: url(newImages/banner_AakasamNeeHaddura.png);
+    background-size: cover;
+}
+.banner_Mirzapur {
+    background-image: url(newImages/banner_Mirzapur.png);
+    background-size: cover;
+}
+.banner_LaxmiBomb {
+    background-image: url(newImages/banner_LaxmiBomb.png);
+    background-size: cover;
+}
+.banner_ColorPhoto {
+    background-image: url(newImages/banner_ColorPhoto.png);
+    background-size: cover;
+}
+.banner_Penguin {
+    background-image: url(newImages/banner_Penguin.png);
+    background-size: cover;
+}
+.banner_movie_96 {
+    background-image: url(newImages/banner_96.png);
+    background-size: cover;
+}
+.banner_AlaVaikunthapurramuloo {
+    background-image: url(newImages/banner_AlaVaikunthapurramuloo.png);
+    background-size: cover;
+}
+.banner_ArjunReddy {
+    background-image: url(newImages/banner_ArjunReddy.png);
+    background-size: cover;
+}
+.banner_V {
+    background-image: url(newImages/banner_V.png);
+    background-size: cover;
+}
+.banner_solobrathukesobetter{
+    background-image: url(newImages/banner_solobrathukesobetter.png);
+    background-size: cover;
+}
+
+@media only screen and (max-width: 420px) {
+    .tile1 {
+        height: 150px;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .scrollable-Content {
+        width: 90%;
+    }
+    .tile1 {
+        width: 90%;
+        height: 150px;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+    .scrollable-Content {
+        width: 80%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+    .scrollable-Content {
+        width: 90%;
+    }
+    .tile1 {
+        height: 190px;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1024px) {
+    .scrollable-Content{
+        width: 53%;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .scrollable-Content{
+        width: 40%;
+    }
+}

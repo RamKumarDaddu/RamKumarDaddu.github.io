@@ -1,0 +1,42 @@
+{
+    "movies": [
+        {
+            "title": "AlaVaikunthapurramuloo",
+            "description": "Valmiki and Ramachandra start their career as clerks in the company of Ananth 'ARK' Radhakrishna. Ramachandra, who marries ARK's daughter Yasu, becomes wealthy while Valmiki remains poor. On the day of the birth of both their children, Ramachandra's son appears to be dead. When nurse Sulochana informs Valmiki about this, he pities Ramachandra and Yasu and offers to exchange his baby with the dead one. After switching them, however, the apparently dead child begins to cry.",
+            "src": "Movie/AlaVaikunthapurramuloo.mp4",
+            "id" : "AlaVaikunthapurramuloo",
+            "class": "AlaVaikunthapurramuloo"
+        },{
+            "title": "ArjunReddy",
+            "description": "Arjun Reddy Deshmukh is a house surgeon at St. Mary's Medical College in Mangalore, India. Despite being a brilliant student, he has severe anger management problems that earn the wrath of the college dean. Arjun's aggressive nature also earns him a reputation among his juniors as a college bully. After a brawl alongside his friend Kamal against members of the opposing team during an inter-college football match the dean asks Arjun to either apologise or leave the college. Arjun initially chooses to leave the college, but stays back after meeting first-year student Preethi Shetty.",
+            "src": "Movie/ArjunReddy.mp4",
+            "id" : "ArjunReddy",
+            "class": "ArjunReddy"
+        },{
+            "title": "Aakasam Nee Haddura",
+            "description": "Inspired by the book 'Simply Fly', the film tells the story of Nedumaaran Rajangam known to friends as Maara, the son of a teacher, who sets out to make the common man fly and takes on the most capital intensive industry in the world with the help of his friends, family and sheer will power.",
+            "src": "Movie/AakasamNeeHaddura.mp4",
+            "id" : "AakasamNeeHaddura",
+            "class": "AakasamNeeHaddura"
+        },{
+            "title": "SCAM",
+            "description": "The Harshad Mehta story revisits this story of India’s first major financial fraud by making use of some brilliant writing and succinct acting chops of its lead actors. The show kicks off with Harshad Mehta’s meteoric rise from humble beginnings, as he becomes the ‘Big Bull’ of Mumbai’s Dalal Street.",
+            "src": "Movie/SCAM.mp4",
+            "id" : "SCAM",
+            "class": "SCAM"
+        }, {
+            "title": "Mirzapur",
+            "description": "Vikrant Massey as Vinay 'Bablu' Ramakant and Vasudha's younger son, who was excellent in studies and wanted to be an IAS Officer by clearing UPSC exam, but later worked as employee in Kaleen Bhaiya's illegal business of guns. He later got shot by Munna on Akhandanand's order 'Guddu' Pandit Ramakant and Vasudha's elder son, late Sweety's husband and later Shabnam's lover. He wanted to be Mr.Purvanchal after winning the contest but later worked as employee in Kaleen Bhaiya's illegal business of guns.",
+            "src": "Movie/Mirzapur.mp4",
+            "id" : "Mirzapur",
+            "class": "Mirzapur"
+        },{
+            "title": "ColorPhoto",
+            "description": "The film begins with Deepthi receiving the news of her father's death. She and her husband Chandu reach their village and meet their family. Ramaraju, Deepthi's brother and the local sub-inspector, tries to talk to her but she shuts him down and goes to her ex Jayakrishna's house in his jeep. Her friend Padmaja accompanies her, and they spot a couple arguing. Deepthi finds their issues very similar to her past with Jayakrishna, and narrates her story.",
+            "src": "Movie/ColorPhoto.mp4",
+            "id" : "ColorPhoto",
+            "class": "ColorPhoto"
+        }
+        
+    ]
+}
