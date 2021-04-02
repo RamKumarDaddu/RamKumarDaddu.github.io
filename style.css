@@ -18,7 +18,7 @@
 }
 .login-container {
     width: 30%;
-    height: 70%;
+    /* height: 70%; */
     background-color: rgba(255, 255, 255, 0.5);
     position: absolute;
     top: 50%;
@@ -50,7 +50,7 @@
     }
     .login-container {
         width: 40%;
-        height: 60%;
+        /* height: 60%; */
     }
 }
 @media (max-width: 425px) {
@@ -60,7 +60,7 @@
     }
     .login-container {
         width: 70%;
-        height: 60%;
+        /* height: 60%; */
     }
     .login-form  {
         font-size: 1.8vw;
@@ -76,7 +76,7 @@
     }
     .login-container {
         width: 70%;
-        height: 50%;
+        /* height: 50%; */
     }
     .login-form  {
         font-size: 2vw;
