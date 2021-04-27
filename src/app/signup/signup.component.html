@@ -1,0 +1,43 @@
+<div class="login-container signup-c">
+    <div class="signup-div login-div">
+        <div class="container">
+            <div class="row">
+                <form >
+                    <div class="offset-2 col-8 my-3">
+                        <img src="../../assets/images/logo.png" alt="Logo" class="w-100" srcset="">
+                    </div>
+                    <div class="mb-2">
+                        <label for="firstName" class="form-label">First Name <span class="required-style">*</span></label>
+                        <input type="text" required class="form-control" [(ngModel)]="signupDetails.firstName" id="firstName" placeholder="tony">
+                    </div>
+                    <div class="mb-2">
+                        <label for="secondName" class="form-label">Second Name</label>
+                        <input type="text" class="form-control" id="secondName" [(ngModel)]="signupDetails.secondName" placeholder="stark">
+                    </div>
+                    <div class="mb-2">
+                        <label for="emailAddress" class="form-label">Email address <span class="required-style">*</span></label>
+                        <input type="email" required class="form-control" autocomplete="off" [(ngModel)]="signupDetails.email" id="emailAddress" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-2">
+                        <label for="password" class="form-label">Password <span class="required-style">*</span></label>
+                        <input type="password" required class="form-control" autocomplete="off" [(ngModel)]="signupDetails.password" id="password" placeholder="password">
+                    </div>
+                    <div class="mb-2">
+                        <label for="confirmPassword" class="form-label">Confirm Password <span class="required-style">*</span></label>
+                        <input type="password" required class="form-control" autocomplete="off" [(ngModel)]="signupDetails.confirmPassword" id="confirmPassword" placeholder="confirm password">
+                    </div>
+                    <button type="submit" class="btn btn-default c-default ml-2 mb-3" (click)="classifiedSignup()"> Sign up </button>
+                    <br>
+                    <span *ngIf="showWarning" class="alert alert-danger alert-position">
+                        {{warningMessage}}
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+    <button type="button" class="btn-close close" routerLink="/home"  data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+
+<div><pre>
+    =========== {{signupDetails | json}}
+ </pre></div>
