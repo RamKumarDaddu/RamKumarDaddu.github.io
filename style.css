@@ -227,6 +227,9 @@ figure figcaption {
 }
 
 @media screen and (max-width: 768px) {
+    #main, #layer {
+        width: 50%;
+    }
     .path-parent {
       height: 70%;
     }
@@ -236,6 +239,9 @@ figure figcaption {
     }
 }
 @media screen and (max-width: 425px) {
+    #main, #layer {
+        width: 60%;
+    }
     .cont {
         height: 98%;
     }
