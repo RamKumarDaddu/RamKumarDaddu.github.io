@@ -22,6 +22,7 @@ body {
     width: 30%;
     height: 100%;
     float: right;
+    overflow-y: auto;
 }
 .right-container .shapes {
     padding: 15px;
@@ -223,4 +224,46 @@ figure figcaption {
     box-shadow: 0 1px 2px rgba(16, 10, 9, 0.15);
     border-radius: 5px;
     letter-spacing: 1px;
+}
+
+@media screen and (max-width: 768px) {
+    .path-parent {
+      height: 70%;
+    }
+    .code {
+        padding: 1rem;
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 425px) {
+    .cont {
+        height: 98%;
+    }
+    .left-container {
+        height: 70%;
+        width: 100%;
+    }
+    .handle {
+        width: 15px;
+        height: 15px;
+    }
+    .right-container {
+        width: 100%;
+    }
+    .path-parent {
+      height: 76%;
+    }
+    .code {
+        padding: 0.9rem;
+        font-size: 0.7rem;
+    }
+    .copy-btn {
+        width: 20px;
+    }
+    h1 {
+        font-size: 1.5em;
+    }
+    .right-container {
+        height: 30%;
+    }
 }
